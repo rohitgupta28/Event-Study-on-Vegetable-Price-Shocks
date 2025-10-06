@@ -1,0 +1,21 @@
+flowchart TD
+    A[📦 Data Collection<br/> & Preparation] --> B[🧹 Data Cleaning<br/>(01_data_cleaning.ipynb)]
+    B --> C[⚡ Event Identification<br/>(02_event_study_main.ipynb)]
+    C --> D[📉 Convergence Analysis<br/>β & σ Estimation]
+    D --> E[🧪 Robustness Checks<br/>(03_shock_summary.ipynb)]
+    E --> F[🔍 Cross-Shock Comparison<br/>(04_cross_shock_analysis.ipynb)]
+    F --> G[📊 Visualization Dashboard<br/>(streamlit_app.py)]
+
+    subgraph Outputs
+        H1[beta_convergence_event_path.csv]
+        H2[sigma_convergence_event_path.csv]
+        H3[robust_se_by_event_time.csv]
+        H4[shock_dates_used.csv]
+    end
+
+    D --> H1
+    D --> H2
+    E --> H3
+    C --> H4
+
+    G --> I[🎯 Interactive Dashboard<br/>for Policy & Research Insights]
