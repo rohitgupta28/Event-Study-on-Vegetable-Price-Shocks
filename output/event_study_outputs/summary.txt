@@ -1,0 +1,5 @@
+States: 33
+Convergence variable: relc
+Shock source: Proxy on cross-state Δrelc (mean + 1.5*std)
+Num shocks: 7
+Window: ±6 months

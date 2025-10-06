@@ -1,106 +1,38 @@
-## Event Study on Vegetable Price Shocks
+# Event Study — Vegetable Price Shocks
 
-This project analyzes the impact of vegetable price shocks on macroeconomic stability in India using an event-study methodology. The analysis estimates how quickly shocks converge (half-life) and provides interactive visualizations via a Streamlit dashboard.
+This repository contains an event-study analysis of convergence around vegetable price shocks across Indian states. It includes data, notebooks, and a main event study script. This README explains how to reproduce results and recommended improvements.
 
-## Features
+## Structure
+- `data/` — input files: `clean_panel.csv`, `halflife_q.xlsx`, `weight.xlsx`
+- `notebook/` — analysis notebooks (data cleaning, main event study, summaries)
+- `output/event_study_outputs/` — main outputs (CSV + plots + `event_study.py`)
 
-- Event-study framework for identifying and analyzing price shocks
+## How to run
+1. Create a Python environment and install dependencies:
 
-- Estimation of shock convergence (half-life)
+```bash
+pip install -r requirements.txt
+```
 
-- Interactive Streamlit dashboard for timelines and shock visualizations
+2. Re-run the main event study (optional):
 
-- Modular and reproducible Python code
+```bash
+python output/event_study_outputs/event_study.py --file data/halflife_q.xlsx --sheet Sheet1
+```
 
-## Project Structure
+3. Run robustness checks (adds cluster-robust and Newey-West SEs):
 
-Event Study - Vegetable Shocks/
+```bash
+python robustness_checks.py
+```
 
-│
+4. Start Streamlit dashboard (to present results):
 
-├── data/                           # Raw input data
+```bash
+streamlit run streamlit_app.py
+```
 
-│   ├── halflife_q.xlsx             # Half-life estimation data
-
-│   ├── weight.xlsx                 # State weights 
-
-│   └── clean_panel.csv             # Cleaned panel dataset
-
-│
-
-├── notebook/                       # Jupyter Notebooks for stepwise analysis
-
-│   ├── 01_data_cleaning.ipynb      # Data cleaning & preprocessing
-
-│   ├── 02_event_study_main.ipynb   # Main event-study analysis
-
-│   ├── 03_shock_summary.ipynb      # Summarizing identified shocks
-
-│   └── 04_cross_shock_analysis.ipynb  # Cross-shock comparative analysis
-
-│
-
-├── output/
-
-│   └── event_study_outputs/        # Model outputs & intermediate results
-
-│       └── event_study.py          # Script for running event study pipeline
-
-│       ├── beta_convergence_event_path.csv
-
-│       ├── sigma_convergence_event_path.csv
-
-│       ├── shock_dates_used.csv
-
-│       ├── robust_se_by_event_time.csv
-
-│
-
-├── streamlit_app.py                # Interactive Streamlit dashboard
-
-├── requirements.txt                # Python dependencies
-
-└── README.md                       # Project documentation
-
-## Installation
-
-- Clone this repository:
-
-  git clone https://github.com/your-username/veg-shock-event-study.git
-
-  cd veg-shock-event-study
-
-
-- Create and activate a virtual environment:
-
-  python -m venv venv
-  
-  source venv/bin/activate   # On Windows: venv\Scripts\activate
-
-
-- Install dependencies:
-
-  pip install -r requirements.txt
-
-## Usage
-
-- Run the event study analysis:
-
-  python event_study.py
-
-- Launch the Streamlit dashboard:
-
-  streamlit run streamlit_app.py              #Open the app in your browser (usually http://localhost:8501).
-
-## Tech Stack
-
-- Python (pandas, numpy, statsmodels, scikit-learn)
-
-- Streamlit (for dashboard)
-
-- Plotly (for interactive plots)
-
-
-## Created by
-
-Rohit Gupta.
+## Notes & Recommendations
+- Reproducibility: add `requirements.txt` (below) and avoid hard-coded absolute paths in `event_study.py`.
+- Statistical: include cluster-robust SEs, Newey-West corrections, and sensitivity checks for WINDOW and threshold. See `robustness_checks.py`.
+- Interpretation: add a short conclusions section in notebooks summarizing the economic meaning of σ and β changes.
