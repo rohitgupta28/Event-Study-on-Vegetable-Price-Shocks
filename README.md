@@ -88,12 +88,12 @@ Event Study - Vegetable Shocks/
 
 ```mermaid
 flowchart TD
-    A[📦 Data Collection & Preparation] --> B[🧹 Data Cleaning (01_data_cleaning.ipynb)]
-    B --> C[⚡ Event Identification (02_event_study_main.ipynb)]
-    C --> D[📉 Convergence Analysis β & σ Estimation]
-    D --> E[🧪 Robustness Checks (03_shock_summary.ipynb)]
-    E --> F[🔍 Cross-Shock Comparison (04_cross_shock_analysis.ipynb)]
-    F --> G[📊 Visualization Dashboard (streamlit_app.py)]
+    A[Data Collection & Preparation] --> B[Data Cleaning (01_data_cleaning.ipynb)]
+    B --> C[Event Identification (02_event_study_main.ipynb)]
+    C --> D[Convergence Analysis β & σ Estimation]
+    D --> E[Robustness Checks (03_shock_summary.ipynb)]
+    E --> F[Cross-Shock Comparison (04_cross_shock_analysis.ipynb)]
+    F --> G[Visualization Dashboard (streamlit_app.py)]
 
     subgraph Outputs
         H1[beta_convergence_event_path.csv]
