@@ -1,8 +1,8 @@
-📊 Event Study on Vegetable Price Shocks
+## Event Study on Vegetable Price Shocks
 
 This project analyzes the impact of vegetable price shocks on macroeconomic stability in India using an event-study methodology. The analysis estimates how quickly shocks converge (half-life) and provides interactive visualizations via a Streamlit dashboard.
 
-🚀 Features
+## Features
 
 - Event-study framework for identifying and analyzing price shocks
 
@@ -12,7 +12,7 @@ This project analyzes the impact of vegetable price shocks on macroeconomic stab
 
 - Modular and reproducible Python code
 
-🗂️ Project Structure
+## Project Structure
 
 Event Study - Vegetable Shocks/
 
@@ -62,69 +62,45 @@ Event Study - Vegetable Shocks/
 
 └── README.md                       # Project documentation
 
-📦 Installation
+## Installation
 
-Clone this repository:
+- Clone this repository:
 
-git clone https://github.com/your-username/veg-shock-event-study.git
-cd veg-shock-event-study
+  git clone https://github.com/your-username/veg-shock-event-study.git
 
-
-Create and activate a virtual environment:
-
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+  cd veg-shock-event-study
 
 
-Install dependencies:
+- Create and activate a virtual environment:
 
-pip install -r requirements.txt
-
-▶️ Usage
-
-Run the event study analysis:
-
-python event_study.py
+  python -m venv venv
+  
+  source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 
-Launch the Streamlit dashboard:
+- Install dependencies:
 
-streamlit run streamlit_app.py
+  pip install -r requirements.txt
 
+## Usage
 
-Open the app in your browser (usually http://localhost:8501
-).
+- Run the event study analysis:
 
-📊 Input Data
+  python event_study.py
 
-The key input file is:
+- Launch the Streamlit dashboard:
 
-output/event_study_outputs/shock_dates_used.csv
-Example format:
+  streamlit run streamlit_app.py              #Open the app in your browser (usually http://localhost:8501).
 
-shock_date
-2013-12
-2018-11
-2020-04
-2020-05
-2020-06
-2020-12
-2023-07
+## Tech Stack
 
-📸 Screenshots
+- Python (pandas, numpy, statsmodels, scikit-learn)
 
-Add screenshots of your Streamlit dashboard here once it’s running.
+- Streamlit (for dashboard)
 
-🛠️ Tech Stack
-
-Python (pandas, numpy, statsmodels, scikit-learn)
-
-Streamlit (for dashboard)
-
-Plotly (for interactive plots)
+- Plotly (for interactive plots)
 
 
-👤 Created by
+## Created by
 
-Rohit Gupta
-
+Rohit Gupta.
