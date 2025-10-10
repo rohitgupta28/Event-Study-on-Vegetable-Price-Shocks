@@ -7,49 +7,30 @@ The project investigates **β- and σ-convergence**, estimates **half-lives of p
 
 ## 🎯 Research Motivation & Results
 
-Food price volatility is a key challenge for inflation management in India.  
-Vegetables, due to their perishable nature, often drive short-term spikes in inflation.  
+Vegetables, due to their perishable nature, contribute to short-term spikes in inflation, which is a key challenge for inflation management in India. Understanding the dynamics of price adjustment helps policymakers and market analysts stabilize short-term volatility while maintaining market efficiency.
 
-This project applies an **event-study framework** to examine convergence and volatility patterns after vegetable price shocks.
+## 📊 Key Results  
 
-**Key Findings:**
-- **β-convergence becomes more negative** → faster adjustment after shocks.  
-- **Half-life** of shocks falls from ~12 months pre-shock to ~6 months post-shock.  
-- **σ-convergence increases** → temporary rise in volatility post-shock.  
-- **Cluster and HAC robust SEs** confirm statistical significance.  
+| Metric | Observation | Interpretation |
+|--------|------------|----------------|
+| **β-convergence** | Became more negative post-shock | Prices adjust faster after shocks |
+| **Half-life of shocks** | ~12 months pre-shock → ~6 months post-shock | Market returns to equilibrium faster |
+| **σ-convergence** | Temporary increase post-shock | Short-run volatility rises |
+| **Statistical Significance** | Cluster and HAC robust SEs | Results are statistically robust |
+  
 
-📌 **Policy Insight:** Shocks accelerate convergence but amplify short-run volatility — policymakers should stabilize volatility while maintaining long-run market efficiency.
+📌 **Policy Insight:** Shocks accelerate convergence but amplify short-term volatility. Stabilization policies should focus on reducing short-run price fluctuations without distorting long-term market behavior.
 
 ---
+## 🔮 Future Scope
 
-## 🗂️ Project Structure
+- Extend analysis to other perishable commodities (e.g., fruits, dairy).
 
-```bash
-Event Study - Vegetable Shocks/
-│
-├── data/                           # Raw input data
-│   ├── halflife_q.xlsx             # Half-life estimation data
-│   ├── weight.xlsx                 # State weights (not used in final version)
-│   └── clean_panel.csv             # Cleaned panel dataset
-│
-├── notebook/                       # Jupyter Notebooks for stepwise analysis
-│   ├── 01_data_cleaning.ipynb      # Data cleaning & preprocessing
-│   ├── 02_event_study_main.ipynb   # Main event-study analysis
-│   ├── 03_shock_summary.ipynb      # Summarizing identified shocks
-│   └── 04_cross_shock_analysis.ipynb  # Cross-shock comparative analysis
-│
-├── output/
-│   └── event_study_outputs/        # Model outputs & intermediate results
-│       ├── event_study.py          # Script for running event study pipeline
-│       ├── beta_convergence_event_path.csv
-│       ├── sigma_convergence_event_path.csv
-│       ├── shock_dates_used.csv
-│       └── robust_se_by_event_time.csv
-│
-├── streamlit_app.py                # Interactive Streamlit dashboard
-├── requirements.txt                # Python dependencies
-└── README.md                       # Project documentation
-```
+- Integrate real-time price feeds for predictive shock detection.
+
+- Apply machine learning models for forecasting shock magnitude and duration.
+
+- Explore macroeconomic implications of food price volatility on inflation and supply chain planning.
 
 ---
 
