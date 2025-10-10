@@ -1,0 +1,21 @@
+shock_date,source_state,state,weight_value
+2016-06,Dadra and Nagar Haveli,Gujarat,0.5
+2016-06,Dadra and Nagar Haveli,Maharashtra,0.5
+2017-04,Dadra and Nagar Haveli,Gujarat,0.5
+2017-04,Dadra and Nagar Haveli,Maharashtra,0.5
+2017-08,Dadra and Nagar Haveli,Gujarat,0.5
+2017-08,Dadra and Nagar Haveli,Maharashtra,0.5
+2023-12,Daman and Diu,Gujarat,0.5
+2023-12,Daman and Diu,Maharashtra,0.5
+2024-09,Daman and Diu,Gujarat,0.5
+2024-09,Daman and Diu,Maharashtra,0.5
+2020-04,Delhi,Haryana,0.5
+2020-04,Delhi,Uttar Pradesh,0.5
+2020-05,Mizoram,Assam,0.333333333
+2020-05,Mizoram,Manipur,0.333333333
+2020-05,Mizoram,Tripura,0.333333333
+2022-01,Mizoram,Assam,0.333333333
+2022-01,Mizoram,Manipur,0.333333333
+2022-01,Mizoram,Tripura,0.333333333
+2012-12,Sikkim,West Bengal,1
+2013-03,Sikkim,West Bengal,1

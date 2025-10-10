@@ -1,0 +1,4 @@
+Total shocks detected: 10
+States affected: 5
+Total propagated records: 20
+Weight matrix shape: (33, 33)
