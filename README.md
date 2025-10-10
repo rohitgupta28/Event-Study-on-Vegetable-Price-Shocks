@@ -139,5 +139,5 @@ flowchart TD
 
 ## 🧾 Created By  
 
-**Rohit Gupta**  
+**Rohit Gupta.**  
 📧 rohitg2801@gmail.com
